@@ -14,9 +14,9 @@ But sometimes, the robot makes mistakes. Maybe it walks into a wall or falls dow
 
 Now, let’s talk about some cool things that use reinforcement learning:
 
-    - Self-Driving Cars: Imagine a car that learns to drive itself by practicing on virtual roads. It gets rewards for staying in the right lane and avoiding accidents.
-    - Game Playing AI: Computers can learn to play games like chess, Go, or even video games. They get better over time by trying different moves and learning from their mistakes.
-    - Robotics: Robots can learn to do tasks like picking up objects or folding laundry. They learn by trial and error, just like you do when you learn to tie your shoes.
+- Self-Driving Cars: Imagine a car that learns to drive itself by practicing on virtual roads. It gets rewards for staying in the right lane and avoiding accidents.
+- Game Playing AI: Computers can learn to play games like chess, Go, or even video games. They get better over time by trying different moves and learning from their mistakes.
+- Robotics: Robots can learn to do tasks like picking up objects or folding laundry. They learn by trial and error, just like you do when you learn a new skill.
 
 
 ## Course Summary
