@@ -25,7 +25,7 @@
 
 [More About Rewards (Utilities)](./More%20About%20Rewards/More%20About%20Rewards%20(Utilities).md)
 
-- In general, we seek to maximize the expected return, where the return, denoted Gt, is defined as some specific function of the reward sequence
+- In general, we seek to maximize the expected return, where the return, denoted $G_t$, is defined as some specific function of the reward sequence
 
     $G_t = R_{t+1} + R_{t+2} + .... R_T$
 
@@ -41,7 +41,7 @@
 
 # Policies and Value Functions
 
-[Policies](https://www.notion.so/Policies-9b4ff1610f094eba9e470925b61bd576?pvs=21)
+[Policies](./Markov%20Decision%20Processes/Markov%20Decision%20Processes%20(MDPs)/Policies.md)
 
 - Basically all RL algorithms involve estimating *value functions* - functions of states (or of state-action pairs) that estimate how good it is for the agent to be in a given state
     - How good here refers to the future rewards that can be expected
