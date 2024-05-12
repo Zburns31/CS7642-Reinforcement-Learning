@@ -1,7 +1,3 @@
-# Upper Confidence Bound (UCB)
-
----
-
 # Overview
 
 - Upper Confidence Bound (UCB) is the most widely used solution method for multi-armed bandit problems. This algorithm is based on the principle of optimism in the face of uncertainty
@@ -13,7 +9,7 @@
     - ***This distribution shows that the action value for $a_1$ has the highest variance and hence maximum uncertainty***
 - UCB says that we should choose the arm $a_1$ and receive a reward making us less uncertain about its action-value. For the next trial (time step), if we still are very uncertain about a we will choose it again until the uncertainty is reduced below a threshold
 
-![Untitled](Upper%20Confidence%20Bound%20(UCB)%20bb228872208c4da796f15cb19e062536/Untitled.png)
+![Untitled](./Upper%20Confidence%20Bound%20(UCB)/Untitled.png)
 
 ## Why does this work?
 

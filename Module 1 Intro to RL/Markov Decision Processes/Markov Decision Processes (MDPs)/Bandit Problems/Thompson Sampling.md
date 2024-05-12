@@ -1,14 +1,10 @@
-# Thompson Sampling
-
----
-
 # How it works
 
 - To begin with, all machines are assumed to have a uniform distribution of the probability of success, in this case getting a reward
     - For each observation obtained from a Slot machine, based on the reward a new distribution is generated with probabilities of success for each slot machine
     - Further observations are made based on these prior probabilities obtained on each round or observation which then updates the success distributions
     - After sufficient observations, each slot machine will have a success distribution associated with it which can help the player in choosing the machines wisely to get the maximum rewards
-- We use the **[beta distribution](https://www.notion.so/Beta-Distribution-99d811cda66440c19d7e2b9a11ca58fb?pvs=21) to model this probability**
+- We use the **beta distribution to model this probability**
 
 # Algorithm Overview
 

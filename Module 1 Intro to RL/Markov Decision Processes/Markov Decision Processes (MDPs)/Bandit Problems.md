@@ -1,7 +1,3 @@
-# Bandit Problems
-
----
-
 # What are Multi-Armed Bandit Problems?
 
 - The term "multi-armed bandit" comes from a hypothetical experiment where a person must choose between multiple actions (i.e., slot machines, the "one-armed bandits"), each with an unknown payout
@@ -36,15 +32,15 @@
 
 - **Gittins Index**
     - The remarkable thing about the Gittins index is that it provides a very simple optimal policy for any bandit problem: pull the arm that has the highest Gittins index, then update the Gittins indices
-    
+
     $$
     \lambda = \max_{T>0} \dfrac{E(\sum_{t=0}^{T-1} \gamma^t R_t)} {E(\sum_{t=0}^{T-1} \gamma^t)}
     $$
-    
+
     - This equation defines a kind of “value” for in terms of its ability to deliver a stream of
     timely rewards
         - The numerator of the fraction represents a utility while the denominator can be thought of as a “discounted time,” so the value describes the maximum obtainable utility per unit of discounted time
-- 
+-
 
 # Learning From Rewards: How does it work?
 
@@ -57,26 +53,26 @@
     1. This strategy is based on the Optimism in the Face of Uncertainty principle, and assumes that the unknown mean payoffs of each arm will be as high as possible, based on observable data
         1. The basic idea is to use the samples from each arm to establish a confidence interval for the value of the arm, that is, a range within which the value can be estimated to lie with high confidence
             1. Then choose the arm with the highest upper bound on its confidence interval
-        
+
         $$
         UCB(M_i) = \hat{\mu_i} + g(N) / \sqrt{N_i}
         $$
-        
+
         - **Where:**
             - $\hat{\mu_i}$ current mean value estimate
             - $N_i$ is the number of times arm $M_i$ has been sampled
             - $g(N) / \sqrt{N_i}$ represents some multiple of the standard deviation of the uncertainty in the value
             - $g(N)$ is an appropriately chosen function of N, the total number of samples drawn from all arms
-    
-    [Upper Confidence Bound (UCB)](Bandit%20Problems%20bf3c7792d5ef4a169d709841f571d1b2/Upper%20Confidence%20Bound%20(UCB)%20bb228872208c4da796f15cb19e062536.md)
-    
+
+    - [Upper Confidence Bound (UCB)](./Bandit%20Problems/Upper%20Confidence%20Bound%20(UCB).md)
+
 
 1. **Thompson Sampling (Bayesian)**
     1. With this randomized probability matching strategy, the number of pulls for a given lever should match its actual probability of being the optimal lever
     2. Chooses chooses an arm randomly according to the probability that the arm is in fact optimal, given the samples so far
-    
-    [Thompson Sampling](Bandit%20Problems%20bf3c7792d5ef4a169d709841f571d1b2/Thompson%20Sampling%20553e519dc1864990909f2135e4fcd01b.md)
-    
+
+    - [Thompson Sampling](./Bandit%20Problems/Thompson%20Sampling.md)
+
 
 Now that we have a policy for deciding what to do, how do we learn from our actions?
 
@@ -98,9 +94,9 @@ Now that we have a policy for deciding what to do, how do we learn from our acti
     - The state of arm $M_i$ is defines by $s_i$ and $f_i$, the counts of successes (1s) and failures (0s) so far for that arm
     - The transition probability predicts the next outcome to be 1 with probability $\dfrac {s_i} {s_i + f_i}$and 0 with probability $\dfrac {f_i} {s_i + f_i}$
         - The counts are initialized to 1/2 rather than 0/0
-    
-    ![Untitled](Bandit%20Problems%20bf3c7792d5ef4a169d709841f571d1b2/Untitled.png)
-    
+
+    ![Untitled](./Bandit%20Problems/Untitled.png)
+
 
 # Key Concepts
 
@@ -111,16 +107,15 @@ Now that we have a policy for deciding what to do, how do we learn from our acti
         - Too much exploration, however, means you may end up with a sub-optimal reward once it’s time to stop
 - **Regret**
     - Let’s say that we are already aware of the best arm to pull for the given bandit problem. If we keep pulling this arm repeatedly, we will get a maximum expected reward which can be represented as a horizontal line (as shown in the figure below):
-        
-        ![Untitled](Bandit%20Problems%20bf3c7792d5ef4a169d709841f571d1b2/Untitled%201.png)
-        
+
+        ![Untitled](./Bandit%20Problems/Untitled%201.png)
+
     - ***But in a real problem statement, we need to make repeated trials by pulling different arms till we am approximately sure of the arm to pull for maximum average return at a time t***
         - **The loss that we incur due to time/rounds spent due to the learning is called regret**
             - In other words, we want to maximize my reward even during the learning phase. Regret is very aptly named, as it quantifies exactly how much you regret not picking the optimal arm
-                
-                ![Untitled](Bandit%20Problems%20bf3c7792d5ef4a169d709841f571d1b2/Untitled%202.png)
-                
-    - 
+
+                ![Untitled](./Bandit%20Problems/Untitled%202.png)
+
 
 # Terms
 
@@ -134,4 +129,3 @@ Now that we have a policy for deciding what to do, how do we learn from our acti
 - [https://towardsdatascience.com/solving-the-multi-armed-bandit-problem-b72de40db97c](https://towardsdatascience.com/solving-the-multi-armed-bandit-problem-b72de40db97c)
 - [https://www.analyticsvidhya.com/blog/2018/09/reinforcement-multi-armed-bandit-scratch-python/](https://www.analyticsvidhya.com/blog/2018/09/reinforcement-multi-armed-bandit-scratch-python/)
 - [https://compneuro.neuromatch.io/tutorials/W3D4_ReinforcementLearning/student/W3D4_Tutorial2.html](https://compneuro.neuromatch.io/tutorials/W3D4_ReinforcementLearning/student/W3D4_Tutorial2.html)
--

@@ -1,10 +1,8 @@
 # Linear Programming
 
----
-
 # Intro to Linear Programming
 
-[Linear Programming](https://www.notion.so/Linear-Programming-3ffcb0100dd143abb9373042fc0b088e?pvs=21)
+- [Linear Programming](./Linear%20Programming%20Overview.md)
 
 # Extending LP to MDP’s
 

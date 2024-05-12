@@ -1,7 +1,3 @@
-# Expectimax
-
----
-
 # What is Expectimax?
 
 - The most straightforward approach is actually a simplification of the Expectiminimax algorithm for game trees with chance nodes
